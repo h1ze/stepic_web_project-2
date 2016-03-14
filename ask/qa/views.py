@@ -6,7 +6,7 @@ from django.views.decorators.http import require_GET
 
 
 def test(request, *args, **kwargs):
-    return HttpResponse('OK')
+    return HttpResponse('OK',status=200)
 
 
 @require_GET
