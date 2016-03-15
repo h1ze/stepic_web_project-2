@@ -8,7 +8,7 @@ class Question(models.Model):
     text = models.TextField()
     added_at = models.DateField(auto_now_add=True)
     rating = models.IntegerField(default=0)
-    author = models.ForeignKey(User,default=1)
+    author = models.ForeignKey(User)
     likes = models.TextField()
 
     def __unicode__(self):
@@ -19,4 +19,4 @@ class Answer(models.Model):
     text = models.TextField()
     added_at = models.DateField(auto_now_add=True)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    author = models.ForeignKey(User,default=1)
+    author = models.ForeignKey(User)
