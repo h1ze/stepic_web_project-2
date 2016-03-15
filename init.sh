@@ -8,6 +8,7 @@ sudo /etc/init.d/gunicorn restart
 sudo pip istall django-autofixture
 sudo /etc/init.d/mysql start
 sudo mysql -uroot -e "create database qa"
+sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON qa.* TO 'qa_user'@'localhost' IDENTIFIED BY '123';"
 
 #gunicorn -b 0.0.0.0:8080 hello:app
 #./script.sh
